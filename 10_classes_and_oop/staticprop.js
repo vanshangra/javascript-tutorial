@@ -8,10 +8,20 @@ class User{
         
     }
 
-    createId(){
+    static createId(){
         return `123`
     }
 }
 
 const vansh = new User("vansh")
-console.log(vansh.createId());
+// console.log(vansh.createId());
+
+class Teacher extends User{
+    constructor(username, email){
+        super(username)
+        this.email = email
+    }
+}
+
+const iphone = new Teacher("iphone","i@phone.com")
+console.log(iphone.createId());
